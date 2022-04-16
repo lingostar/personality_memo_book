@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B7C3688027FB13D40002BA0F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3687F27FB13D40002BA0F /* MainView.swift */; };
+		B7C369082804115F0002BA0F /* PersonalityItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C369072804115F0002BA0F /* PersonalityItem.swift */; };
+		B7C3690B280414B10002BA0F /* PersonaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3690A280414B10002BA0F /* PersonaView.swift */; };
+		B7C3690D2804500A0002BA0F /* Personality.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3690C2804500A0002BA0F /* Personality.swift */; };
+		B7C36910280486F30002BA0F /* PersonaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3690F280486F30002BA0F /* PersonaViewModel.swift */; };
+		B7C3691428056A290002BA0F /* PersonalityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3691328056A290002BA0F /* PersonalityViewModel.swift */; };
+		B7C3691628056EBD0002BA0F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3691528056EBD0002BA0F /* HomeViewModel.swift */; };
+		B7CB7A9027F02AF9009535A1 /* Persona_BookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7A8F27F02AF9009535A1 /* Persona_BookApp.swift */; };
+		B7CB7A9227F02AF9009535A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7A9127F02AF9009535A1 /* ContentView.swift */; };
+		B7CB7A9427F02AFE009535A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7CB7A9327F02AFE009535A1 /* Assets.xcassets */; };
+		B7CB7A9727F02AFE009535A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7CB7A9627F02AFE009535A1 /* Preview Assets.xcassets */; };
+		B7CB7A9927F02AFE009535A1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7A9827F02AFE009535A1 /* Persistence.swift */; };
+		B7CB7A9C27F02AFE009535A1 /* Persona_Book.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7A9A27F02AFE009535A1 /* Persona_Book.xcdatamodeld */; };
+		B7CB7AA427F05243009535A1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7AA327F05243009535A1 /* HomeView.swift */; };
+		B7CB7AAE27F075CC009535A1 /* Persona.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7AAD27F075CC009535A1 /* Persona.swift */; };
+		B7CB7AB027F09D28009535A1 /* PersonalityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7AAF27F09D28009535A1 /* PersonalityView.swift */; };
+		B7CB7AB427F09EA8009535A1 /* AIFaceTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7AB327F09EA8009535A1 /* AIFaceTestView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B7C3687F27FB13D40002BA0F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B7C369072804115F0002BA0F /* PersonalityItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityItem.swift; sourceTree = "<group>"; };
+		B7C3690A280414B10002BA0F /* PersonaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaView.swift; sourceTree = "<group>"; };
+		B7C3690C2804500A0002BA0F /* Personality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personality.swift; sourceTree = "<group>"; };
+		B7C3690F280486F30002BA0F /* PersonaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaViewModel.swift; sourceTree = "<group>"; };
+		B7C3691328056A290002BA0F /* PersonalityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityViewModel.swift; sourceTree = "<group>"; };
+		B7C3691528056EBD0002BA0F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B7CB7A8C27F02AF9009535A1 /* Persona Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Persona Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7CB7A8F27F02AF9009535A1 /* Persona_BookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persona_BookApp.swift; sourceTree = "<group>"; };
+		B7CB7A9127F02AF9009535A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B7CB7A9327F02AFE009535A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7CB7A9627F02AFE009535A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B7CB7A9827F02AFE009535A1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		B7CB7A9B27F02AFE009535A1 /* Persona_Book.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Persona_Book.xcdatamodel; sourceTree = "<group>"; };
+		B7CB7AA327F05243009535A1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B7CB7AAD27F075CC009535A1 /* Persona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persona.swift; sourceTree = "<group>"; };
+		B7CB7AAF27F09D28009535A1 /* PersonalityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityView.swift; sourceTree = "<group>"; };
+		B7CB7AB327F09EA8009535A1 /* AIFaceTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFaceTestView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7CB7A8927F02AF9009535A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B7C3690E280486E00002BA0F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B7C3691528056EBD0002BA0F /* HomeViewModel.swift */,
+				B7C3690F280486F30002BA0F /* PersonaViewModel.swift */,
+				B7C3691328056A290002BA0F /* PersonalityViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B7CB7A8327F02AF9009535A1 = {
+			isa = PBXGroup;
+			children = (
+				B7CB7A8E27F02AF9009535A1 /* Persona Book */,
+				B7CB7A8D27F02AF9009535A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7CB7A8D27F02AF9009535A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7CB7A8C27F02AF9009535A1 /* Persona Book.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7CB7A8E27F02AF9009535A1 /* Persona Book */ = {
+			isa = PBXGroup;
+			children = (
+				B7C3690E280486E00002BA0F /* ViewModels */,
+				B7CB7AAC27F075B8009535A1 /* Models */,
+				B7CB7AA227F05216009535A1 /* Views */,
+				B7CB7A8F27F02AF9009535A1 /* Persona_BookApp.swift */,
+				B7CB7A9327F02AFE009535A1 /* Assets.xcassets */,
+				B7CB7A9827F02AFE009535A1 /* Persistence.swift */,
+				B7CB7A9A27F02AFE009535A1 /* Persona_Book.xcdatamodeld */,
+				B7CB7A9527F02AFE009535A1 /* Preview Content */,
+			);
+			path = "Persona Book";
+			sourceTree = "<group>";
+		};
+		B7CB7A9527F02AFE009535A1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B7CB7A9627F02AFE009535A1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B7CB7AA227F05216009535A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7CB7AB627F09FFC009535A1 /* AIFaceTestView */,
+				B7CB7AB527F09FEE009535A1 /* PersonalityView */,
+				B7CB7AA527F052AC009535A1 /* HomeView */,
+				B7CB7A9127F02AF9009535A1 /* ContentView.swift */,
+				B7C3687F27FB13D40002BA0F /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B7CB7AA527F052AC009535A1 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				B7CB7AA327F05243009535A1 /* HomeView.swift */,
+				B7C3690A280414B10002BA0F /* PersonaView.swift */,
+				B7C369072804115F0002BA0F /* PersonalityItem.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		B7CB7AAC27F075B8009535A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7CB7AAD27F075CC009535A1 /* Persona.swift */,
+				B7C3690C2804500A0002BA0F /* Personality.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B7CB7AB527F09FEE009535A1 /* PersonalityView */ = {
+			isa = PBXGroup;
+			children = (
+				B7CB7AAF27F09D28009535A1 /* PersonalityView.swift */,
+			);
+			path = PersonalityView;
+			sourceTree = "<group>";
+		};
+		B7CB7AB627F09FFC009535A1 /* AIFaceTestView */ = {
+			isa = PBXGroup;
+			children = (
+				B7CB7AB327F09EA8009535A1 /* AIFaceTestView.swift */,
+			);
+			path = AIFaceTestView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7CB7A8B27F02AF9009535A1 /* Persona Book */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7CB7A9F27F02AFE009535A1 /* Build configuration list for PBXNativeTarget "Persona Book" */;
+			buildPhases = (
+				B7CB7A8827F02AF9009535A1 /* Sources */,
+				B7CB7A8927F02AF9009535A1 /* Frameworks */,
+				B7CB7A8A27F02AF9009535A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Persona Book";
+			productName = "Persona Book";
+			productReference = B7CB7A8C27F02AF9009535A1 /* Persona Book.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7CB7A8427F02AF9009535A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					B7CB7A8B27F02AF9009535A1 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = B7CB7A8727F02AF9009535A1 /* Build configuration list for PBXProject "Persona Book" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7CB7A8327F02AF9009535A1;
+			productRefGroup = B7CB7A8D27F02AF9009535A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7CB7A8B27F02AF9009535A1 /* Persona Book */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7CB7A8A27F02AF9009535A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7CB7A9727F02AFE009535A1 /* Preview Assets.xcassets in Resources */,
+				B7CB7A9427F02AFE009535A1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7CB7A8827F02AF9009535A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C3688027FB13D40002BA0F /* MainView.swift in Sources */,
+				B7CB7AAE27F075CC009535A1 /* Persona.swift in Sources */,
+				B7C3690B280414B10002BA0F /* PersonaView.swift in Sources */,
+				B7CB7A9927F02AFE009535A1 /* Persistence.swift in Sources */,
+				B7C36910280486F30002BA0F /* PersonaViewModel.swift in Sources */,
+				B7C369082804115F0002BA0F /* PersonalityItem.swift in Sources */,
+				B7CB7A9227F02AF9009535A1 /* ContentView.swift in Sources */,
+				B7CB7AB427F09EA8009535A1 /* AIFaceTestView.swift in Sources */,
+				B7CB7A9027F02AF9009535A1 /* Persona_BookApp.swift in Sources */,
+				B7CB7AB027F09D28009535A1 /* PersonalityView.swift in Sources */,
+				B7CB7AA427F05243009535A1 /* HomeView.swift in Sources */,
+				B7C3690D2804500A0002BA0F /* Personality.swift in Sources */,
+				B7CB7A9C27F02AFE009535A1 /* Persona_Book.xcdatamodeld in Sources */,
+				B7C3691628056EBD0002BA0F /* HomeViewModel.swift in Sources */,
+				B7C3691428056A290002BA0F /* PersonalityViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B7CB7A9D27F02AFE009535A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B7CB7A9E27F02AFE009535A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7CB7AA027F02AFE009535A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Persona Book/Preview Content\"";
+				DEVELOPMENT_TEAM = 6VYPR8MZ57;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pagh2322.Persona-Book";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7CB7AA127F02AFE009535A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Persona Book/Preview Content\"";
+				DEVELOPMENT_TEAM = 6VYPR8MZ57;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "pagh2322.Persona-Book";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7CB7A8727F02AF9009535A1 /* Build configuration list for PBXProject "Persona Book" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7CB7A9D27F02AFE009535A1 /* Debug */,
+				B7CB7A9E27F02AFE009535A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7CB7A9F27F02AFE009535A1 /* Build configuration list for PBXNativeTarget "Persona Book" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7CB7AA027F02AFE009535A1 /* Debug */,
+				B7CB7AA127F02AFE009535A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B7CB7A9A27F02AFE009535A1 /* Persona_Book.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B7CB7A9B27F02AFE009535A1 /* Persona_Book.xcdatamodel */,
+			);
+			currentVersion = B7CB7A9B27F02AFE009535A1 /* Persona_Book.xcdatamodel */;
+			path = Persona_Book.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B7CB7A8427F02AF9009535A1 /* Project object */;
+}
