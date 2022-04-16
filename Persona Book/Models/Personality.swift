@@ -9,7 +9,7 @@ import Foundation
 
 let personalityTypes = ["ISTP-A/T", "ISFP-A/T", "INTP-A/T", "INFP-A/T", "ISTJ-A/T", "INTJ-A/T", "ISFJ-A/T", "INFJ-A/T", "ESTP-A/T", "ESFP-A/T", "ENTP-A/T", "ENFP-A/T", "ESTJ-A/T", "ENTJ-A/T", "ESFJ-A/T", "ENFJ-A/T"]
 
-enum Personality: Int, CaseIterable {
+enum Personality: Int, CaseIterable, Codable {
     case ISTP
     case ISFP
     case INTP

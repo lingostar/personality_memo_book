@@ -12,11 +12,11 @@ struct AIFaceTestView: View {
         NavigationView {
             VStack {
                 GroupBox {
-                    Text("곧 업데이트 예정입니다")
+                    Text("SoonUpdate".localized())
                         .padding()
                 }
             }
-            .navigationBarTitle("AI 관상 테스트")
+            .navigationBarTitle("AIFaceTest".localized())
             .navigationBarTitleDisplayMode(.inline)
             
         }

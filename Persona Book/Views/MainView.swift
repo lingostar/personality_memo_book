@@ -19,13 +19,13 @@ struct MainView: View {
         TabView(selection: $selection) {
             HomeView()
                 .tabItem {
-                    Label("홈", systemImage: "house.fill")
+                    Label("Home".localized(), systemImage: "house.fill")
                 }
                 .tag(Tab.home)
             
             AIFaceTestView()
                 .tabItem {
-                    Label("테스트", systemImage: "face.smiling.fill")
+                    Label("Test".localized(), systemImage: "face.smiling.fill")
                 }
         }
     }

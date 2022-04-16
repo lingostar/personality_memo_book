@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  Persona Book
+
+  Created by peo on 2022/04/16.
+  
+*/
+
+"Home" = "홈";
+"Test" = "테스트";
+"InputPersonaName" = "페르소나의 이름을 입력하세요";
+"Name" = "이름";
+"InputName" = "이름을 입력하세요";
+"Personality" = "성격 유형";
+"Cancel" = "취소";
+"Done" = "완료";
+"SoulMate" = "천생연분";
+"GoodRelation" = "좋은 관계";
+"BadRelation" = "안맞아요";
+"PersonaList" = "페르소나 목록";
+"AddPersona" = "페르소나 추가";
+"EditMyInfo" = "내 정보 수정";
+"AIFaceTest" = "AI 관상 테스트";
+"SoonUpdate" = "곧 업데이트 예정입니다!";

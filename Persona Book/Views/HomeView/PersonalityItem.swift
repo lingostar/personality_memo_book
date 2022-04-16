@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PersonalityItem: View {
     var personality: Personality
-    var number = 0
+    @Binding var number: Int
     
     var body: some View {
         GroupBox {
@@ -25,6 +25,7 @@ struct PersonalityItem: View {
 
 struct PersonalityItem_Previews: PreviewProvider {
     static var previews: some View {
-        PersonalityItem(personality: .ESFJ)
+//        PersonalityItem(personality: .ESFJ)
+        Text("")
     }
 }

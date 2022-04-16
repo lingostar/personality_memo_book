@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Persona: Hashable {
+struct Persona: Codable, Hashable, Identifiable {
     var name: String
     var personality: Personality
+    var id = UUID()
 }

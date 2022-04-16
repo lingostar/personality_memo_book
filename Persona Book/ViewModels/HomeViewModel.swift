@@ -11,7 +11,8 @@ import Combine
 class HomeViewModel: ObservableObject {
     @Published var searchText = "" {
         didSet {
-            self.filteredPersona = self.allPersona.filter { persona in
+            self.loadPersonas()
+            self.allPersona = self.allPersona.filter { persona in
                 if self.searchText.isEmpty {
                     return true
                 }
@@ -19,7 +20,6 @@ class HomeViewModel: ObservableObject {
             }
         }
     }
-    @Published var isRelation = false
     @Published var showPersonaViewModal = false {
         willSet {
             self.userName = (UserDefaults.standard.string(forKey: "name") ?? "")
@@ -34,12 +34,17 @@ class HomeViewModel: ObservableObject {
     
     @Published var isOn = [Bool](repeating: false, count: 16)
     
-    @Published var allPersona = [Persona(name: "one", personality: .ISTP),
-                                 Persona(name: "two", personality: .ISTP),
-                                 Persona(name: "three", personality: .INFJ),
-                                 Persona(name: "four", personality: .ISTP),
-                                 Persona(name: "five", personality: .ISTJ),
-    ]
+    @Published var allPersona = [Persona]()
     
-    @Published var filteredPersona = [Persona(name: "one", personality: .ENTJ)]
+    @Published var personaNumbers = [Int](repeating: 0, count: 16)
+    
+    func loadPersonas() {
+        self.allPersona = []
+        for personality in Personality.allCases {
+            if let encodedData = UserDefaults.standard.array(forKey: personality.title()) as? [Data] {
+                self.allPersona += encodedData.map { try! JSONDecoder().decode(Persona.self, from: $0) }
+                personaNumbers[personality.rawValue] = encodedData.count
+            }
+        }
+    }
 }

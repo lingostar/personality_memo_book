@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  Persona Book
+
+  Created by peo on 2022/04/16.
+  
+*/
+
+"Home" = "Home";
+"Test" = "Test";
+"InputPersonaName" = "Input persona's name";
+"Name" = "Name";
+"InputName" = "Input name";
+"Personality" = "Personality";
+"Cancel" = "Cancel";
+"Done" = "Done";
+"SoulMate" = "Soul Mate";
+"GoodRelation" = "Good Relation";
+"BadRelation" = "Bad Relation";
+"PersonaList" = "Persona List";
+"AddPersona" = "Add Persona";
+"EditMyInfo" = "Edit My Info";
+"AIFaceTest" = "AI Face Test";
+"SoonUpdate" = "Soon Update!";

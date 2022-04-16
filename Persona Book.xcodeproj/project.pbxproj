@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B77887D1280AD0B600D6E1F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B77887D3280AD0B600D6E1F6 /* Localizable.strings */; };
+		B77887D8280AD16500D6E1F6 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77887D7280AD16500D6E1F6 /* Helpers.swift */; };
 		B7C3688027FB13D40002BA0F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3687F27FB13D40002BA0F /* MainView.swift */; };
 		B7C369082804115F0002BA0F /* PersonalityItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C369072804115F0002BA0F /* PersonalityItem.swift */; };
 		B7C3690B280414B10002BA0F /* PersonaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3690A280414B10002BA0F /* PersonaView.swift */; };
@@ -15,11 +17,8 @@
 		B7C3691428056A290002BA0F /* PersonalityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3691328056A290002BA0F /* PersonalityViewModel.swift */; };
 		B7C3691628056EBD0002BA0F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3691528056EBD0002BA0F /* HomeViewModel.swift */; };
 		B7CB7A9027F02AF9009535A1 /* Persona_BookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7A8F27F02AF9009535A1 /* Persona_BookApp.swift */; };
-		B7CB7A9227F02AF9009535A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7A9127F02AF9009535A1 /* ContentView.swift */; };
 		B7CB7A9427F02AFE009535A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7CB7A9327F02AFE009535A1 /* Assets.xcassets */; };
 		B7CB7A9727F02AFE009535A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7CB7A9627F02AFE009535A1 /* Preview Assets.xcassets */; };
-		B7CB7A9927F02AFE009535A1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7A9827F02AFE009535A1 /* Persistence.swift */; };
-		B7CB7A9C27F02AFE009535A1 /* Persona_Book.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7A9A27F02AFE009535A1 /* Persona_Book.xcdatamodeld */; };
 		B7CB7AA427F05243009535A1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7AA327F05243009535A1 /* HomeView.swift */; };
 		B7CB7AAE27F075CC009535A1 /* Persona.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7AAD27F075CC009535A1 /* Persona.swift */; };
 		B7CB7AB027F09D28009535A1 /* PersonalityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CB7AAF27F09D28009535A1 /* PersonalityView.swift */; };
@@ -27,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B77887D2280AD0B600D6E1F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B77887D4280AD12D00D6E1F6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B77887D5280AD13400D6E1F6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B77887D7280AD16500D6E1F6 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		B7C3687F27FB13D40002BA0F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B7C369072804115F0002BA0F /* PersonalityItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityItem.swift; sourceTree = "<group>"; };
 		B7C3690A280414B10002BA0F /* PersonaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaView.swift; sourceTree = "<group>"; };
@@ -36,11 +39,8 @@
 		B7C3691528056EBD0002BA0F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		B7CB7A8C27F02AF9009535A1 /* Persona Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Persona Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CB7A8F27F02AF9009535A1 /* Persona_BookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persona_BookApp.swift; sourceTree = "<group>"; };
-		B7CB7A9127F02AF9009535A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B7CB7A9327F02AFE009535A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7CB7A9627F02AFE009535A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B7CB7A9827F02AFE009535A1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		B7CB7A9B27F02AFE009535A1 /* Persona_Book.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Persona_Book.xcdatamodel; sourceTree = "<group>"; };
 		B7CB7AA327F05243009535A1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B7CB7AAD27F075CC009535A1 /* Persona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persona.swift; sourceTree = "<group>"; };
 		B7CB7AAF27F09D28009535A1 /* PersonalityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityView.swift; sourceTree = "<group>"; };
@@ -58,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B77887D6280AD15400D6E1F6 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B77887D7280AD16500D6E1F6 /* Helpers.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		B7C3690E280486E00002BA0F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,14 +95,14 @@
 		B7CB7A8E27F02AF9009535A1 /* Persona Book */ = {
 			isa = PBXGroup;
 			children = (
+				B77887D6280AD15400D6E1F6 /* Helper */,
 				B7C3690E280486E00002BA0F /* ViewModels */,
 				B7CB7AAC27F075B8009535A1 /* Models */,
 				B7CB7AA227F05216009535A1 /* Views */,
 				B7CB7A8F27F02AF9009535A1 /* Persona_BookApp.swift */,
 				B7CB7A9327F02AFE009535A1 /* Assets.xcassets */,
-				B7CB7A9827F02AFE009535A1 /* Persistence.swift */,
-				B7CB7A9A27F02AFE009535A1 /* Persona_Book.xcdatamodeld */,
 				B7CB7A9527F02AFE009535A1 /* Preview Content */,
+				B77887D3280AD0B600D6E1F6 /* Localizable.strings */,
 			);
 			path = "Persona Book";
 			sourceTree = "<group>";
@@ -113,7 +121,6 @@
 				B7CB7AB627F09FFC009535A1 /* AIFaceTestView */,
 				B7CB7AB527F09FEE009535A1 /* PersonalityView */,
 				B7CB7AA527F052AC009535A1 /* HomeView */,
-				B7CB7A9127F02AF9009535A1 /* ContentView.swift */,
 				B7C3687F27FB13D40002BA0F /* MainView.swift */,
 			);
 			path = Views;
@@ -196,6 +203,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				ko,
 			);
 			mainGroup = B7CB7A8327F02AF9009535A1;
 			productRefGroup = B7CB7A8D27F02AF9009535A1 /* Products */;
@@ -213,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7CB7A9727F02AFE009535A1 /* Preview Assets.xcassets in Resources */,
+				B77887D1280AD0B600D6E1F6 /* Localizable.strings in Resources */,
 				B7CB7A9427F02AFE009535A1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,16 +237,14 @@
 				B7C3688027FB13D40002BA0F /* MainView.swift in Sources */,
 				B7CB7AAE27F075CC009535A1 /* Persona.swift in Sources */,
 				B7C3690B280414B10002BA0F /* PersonaView.swift in Sources */,
-				B7CB7A9927F02AFE009535A1 /* Persistence.swift in Sources */,
 				B7C36910280486F30002BA0F /* PersonaViewModel.swift in Sources */,
 				B7C369082804115F0002BA0F /* PersonalityItem.swift in Sources */,
-				B7CB7A9227F02AF9009535A1 /* ContentView.swift in Sources */,
 				B7CB7AB427F09EA8009535A1 /* AIFaceTestView.swift in Sources */,
 				B7CB7A9027F02AF9009535A1 /* Persona_BookApp.swift in Sources */,
 				B7CB7AB027F09D28009535A1 /* PersonalityView.swift in Sources */,
 				B7CB7AA427F05243009535A1 /* HomeView.swift in Sources */,
 				B7C3690D2804500A0002BA0F /* Personality.swift in Sources */,
-				B7CB7A9C27F02AFE009535A1 /* Persona_Book.xcdatamodeld in Sources */,
+				B77887D8280AD16500D6E1F6 /* Helpers.swift in Sources */,
 				B7C3691628056EBD0002BA0F /* HomeViewModel.swift in Sources */,
 				B7C3691428056A290002BA0F /* PersonalityViewModel.swift in Sources */,
 			);
@@ -244,11 +252,25 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		B77887D3280AD0B600D6E1F6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B77887D2280AD0B600D6E1F6 /* en */,
+				B77887D4280AD12D00D6E1F6 /* zh-Hans */,
+				B77887D5280AD13400D6E1F6 /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		B7CB7A9D27F02AFE009535A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -309,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -439,19 +462,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B7CB7A9A27F02AFE009535A1 /* Persona_Book.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B7CB7A9B27F02AFE009535A1 /* Persona_Book.xcdatamodel */,
-			);
-			currentVersion = B7CB7A9B27F02AFE009535A1 /* Persona_Book.xcdatamodel */;
-			path = Persona_Book.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B7CB7A8427F02AF9009535A1 /* Project object */;
 }

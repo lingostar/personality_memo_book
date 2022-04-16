@@ -20,7 +20,7 @@ struct HomeView: View {
                 LazyVGrid(columns: columns,  spacing: 20) {
                     ForEach(0..<16, id: \.self) { index in
                         NavigationLink(destination: PersonalityView(personality: index.personality), isActive: self.$viewModel.isOn[index]) {
-                            PersonalityItem(personality: index.personality)
+                            PersonalityItem(personality: index.personality, number: self.$viewModel.personaNumbers[index])
                                 .onTapGesture {
                                     self.viewModel.isOn[index] = true
                                 }
@@ -31,7 +31,7 @@ struct HomeView: View {
                 .padding(.vertical, 5)
             }
             .padding(.horizontal, 20)
-            .navigationTitle("홈")
+            .navigationTitle("Home".localized())
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem {
@@ -46,8 +46,14 @@ struct HomeView: View {
                 }
             }
         }
-        .searchable(text: self.$viewModel.searchText, placement: .toolbar, prompt: "페르소나의 이름을 입력하세요.") {
-            ForEach(self.viewModel.filteredPersona, id: \.self) { persona in
+        .onAppear {
+            self.viewModel.loadPersonas()
+        }
+        .onChange(of: self.viewModel.isOn) { _ in
+            self.viewModel.loadPersonas()
+        }
+        .searchable(text: self.$viewModel.searchText, placement: .toolbar, prompt: "InputPersonaName".localized()) {
+            ForEach(self.viewModel.allPersona) { persona in
                 HStack {
                     Text(persona.name)
                     Spacer()

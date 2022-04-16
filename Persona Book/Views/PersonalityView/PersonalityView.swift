@@ -10,6 +10,7 @@ import SwiftUI
 struct PersonalityView: View {
     @StateObject var viewModel = PersonalityViewModel()
     var personality: Personality
+    @State var tempPersona = Persona(name: "", personality: .ISTJ)
     
     var body: some View {
         Form {
@@ -26,7 +27,7 @@ struct PersonalityView: View {
                     }
                 }
             }, header: {
-                Text("천생연분")
+                Text("SoulMate".localized())
             })
             
             Section(content: {
@@ -42,7 +43,7 @@ struct PersonalityView: View {
                     }
                 }
             }, header: {
-                Text("좋은 관계")
+                Text("GoodRelation".localized())
             })
             
             Section(content: {
@@ -58,16 +59,16 @@ struct PersonalityView: View {
                     }
                 }
             }, header: {
-                Text("안맞아요")
+                Text("BadRelation".localized())
             })
             
             Section(content: {
-                ForEach(self.viewModel.personaNames, id: \.self) { name in
-                    Text(name)
+                ForEach(self.viewModel.personas) { persona in
+                    Text(persona.name)
                 }
                 .onDelete(perform: self.deletePersona)
             }, header: {
-                Text("페르소나 목록")
+                Text("PersonaList".localized())
             })
         }
         .navigationBarTitle(personality.title())
@@ -84,9 +85,18 @@ struct PersonalityView: View {
                 }
             }
         }
+        .onAppear {
+            self.viewModel.personality = self.personality
+            self.viewModel.loadPersonas(key: self.personality.title())
+        }
+        .onChange(of: self.viewModel.showPersonaViewModal) { value in
+            if !value {
+                self.viewModel.loadPersonas(key: self.personality.title())
+            }
+        }
     }
     private func deletePersona(at indexSet: IndexSet) {
-        self.viewModel.personaNames.remove(atOffsets: indexSet)
+        self.viewModel.deletePersona(indexSet: indexSet)
     }
 }
 

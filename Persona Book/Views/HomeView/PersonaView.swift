@@ -18,10 +18,10 @@ struct PersonaView: View {
             List {
                 Section {
                     HStack {
-                        Text("이름")
+                        Text("Name".localized())
                             .padding(.trailing, 40)
                         ZStack(alignment: .trailing) {
-                            TextField("이름을 입력하세요", text: self.$viewModel.persona.name)
+                            TextField("InputName".localized(), text: self.$viewModel.persona.name)
                             if !self.viewModel.persona.name.isEmpty {
                                 Image(systemName: "xmark.circle.fill")
                                     .foregroundColor(.gray)
@@ -34,7 +34,7 @@ struct PersonaView: View {
                 }
                 
                 Section {
-                    Picker("성격 유형", selection: self.$viewModel.persona.personality) {
+                    Picker("Personality".localized(), selection: self.$viewModel.persona.personality) {
                         ForEach(personalityTypes.indices, id: \.self) {
                             Text("\(personalityTypes[$0])")
                                 .tag($0.personality)
@@ -50,7 +50,7 @@ struct PersonaView: View {
                     Button(action: {
                         self.presentation.wrappedValue.dismiss()
                     }) {
-                        Text("취소")
+                        Text("Cancel".localized())
                     }
                 }
                 ToolbarItem(placement: .confirmationAction) {
@@ -58,7 +58,7 @@ struct PersonaView: View {
                         self.viewModel.confirm()
                         self.presentation.wrappedValue.dismiss()
                     }) {
-                        Text("완료")
+                        Text("Done".localized())
                     }
                     .disabled(self.viewModel.persona.name.isEmpty)
                 }
