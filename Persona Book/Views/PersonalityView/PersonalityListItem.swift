@@ -13,8 +13,10 @@ struct PersonalityListItem: View {
     
     var body: some View {
         NavigationLink(destination: List(self.personalityList, id: \.self) { personality in
-                Text(personality.title())
+            Text(personality.title())
             }
+            .navigationTitle(realtionText)
+            .navigationBarTitleDisplayMode(.inline)
         ) {
             HStack {
                 Text(realtionText)
