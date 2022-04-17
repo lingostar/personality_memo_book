@@ -28,23 +28,12 @@ struct HomeView: View {
                         .foregroundColor(.primary)
                     }
                 }
-                .padding(.vertical, 5)
+                .padding(.bottom, 10)
+                .padding(.horizontal, 15)
             }
-            .padding(.horizontal, 20)
+            .background(Color(UIColor.systemGroupedBackground))
             .navigationTitle("Home".localized())
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem {
-                    Button(action: {
-                        self.viewModel.showPersonaViewModal = true
-                    }) {
-                        Image(systemName: "person")
-                    }
-                    .sheet(isPresented: self.$viewModel.showPersonaViewModal) {
-                        PersonaView(persona: Persona(name: self.viewModel.userName, personality: self.viewModel.userPersonality.personality), mode: .MY)
-                    }
-                }
-            }
         }
         .onAppear {
             self.viewModel.loadPersonas()

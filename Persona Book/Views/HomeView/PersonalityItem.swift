@@ -12,14 +12,16 @@ struct PersonalityItem: View {
     @Binding var number: Int
     
     var body: some View {
-        GroupBox {
-            VStack(spacing: 0) {
-                Text(personality.title())
-                Text("\(number)")
-                    .padding(.top, 10)
-            }
-            .padding(10)
+        VStack(spacing: 0) {
+            Text(personality.title())
+            Text("\(number)")
+                .padding(.top, 10)
+                .font(.subheadline)
         }
+        .padding(.horizontal, 30)
+        .padding(.vertical, 20)
+        .background(Color(UIColor.secondarySystemGroupedBackground))
+        .cornerRadius(10)
     }
 }
 

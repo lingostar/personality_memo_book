@@ -20,17 +20,8 @@ class HomeViewModel: ObservableObject {
             }
         }
     }
-    @Published var showPersonaViewModal = false {
-        willSet {
-            self.userName = (UserDefaults.standard.string(forKey: "name") ?? "")
-            self.userPersonality = UserDefaults.standard.integer(forKey: "personality")
-        }
-    }
     
     @Published var showPersonalityView = false
-    
-    var userName: String = (UserDefaults.standard.string(forKey: "name") ?? "")
-    var userPersonality: Int = UserDefaults.standard.integer(forKey: "personality")
     
     @Published var isOn = [Bool](repeating: false, count: 16)
     

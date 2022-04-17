@@ -15,51 +15,11 @@ struct PersonalityView: View {
     var body: some View {
         Form {
             Section(content: {
-                ScrollView(.horizontal, showsIndicators: true) {
-                    HStack(spacing: 0) {
-                        ForEach(self.personality.getSoulMateRelation(), id: \.self) { eachPersonality in
-                            GroupBox {
-                                Text(eachPersonality.title())
-                                    .font(.subheadline)
-                            }
-                            
-                        }
-                    }
-                }
+                PersonalityListItem(realtionText: "SoulMate".localized(), personalityList: self.personality.getSoulMateRelation())
+                PersonalityListItem(realtionText: "GoodRelationship".localized(), personalityList: self.personality.getGoodRelation())
+                PersonalityListItem(realtionText: "BadRelationship".localized(), personalityList: self.personality.getBadRelation())
             }, header: {
-                Text("SoulMate".localized())
-            })
-            
-            Section(content: {
-                ScrollView(.horizontal, showsIndicators: true) {
-                    HStack(spacing: 0) {
-                        ForEach(self.personality.getGoodRelation(), id: \.self) { eachPersonality in
-                            GroupBox {
-                                Text(eachPersonality.title())
-                                    .font(.subheadline)
-                            }
-                            
-                        }
-                    }
-                }
-            }, header: {
-                Text("GoodRelation".localized())
-            })
-            
-            Section(content: {
-                ScrollView(.horizontal, showsIndicators: true) {
-                    HStack(spacing: 0) {
-                        ForEach(self.personality.getBadRelation(), id: \.self) { eachPersonality in
-                            GroupBox {
-                                Text(eachPersonality.title())
-                                    .font(.subheadline)
-                            }
-                            
-                        }
-                    }
-                }
-            }, header: {
-                Text("BadRelation".localized())
+                Text("RelationshipWithOP".localized())
             })
             
             Section(content: {
@@ -97,11 +57,5 @@ struct PersonalityView: View {
     }
     private func deletePersona(at indexSet: IndexSet) {
         self.viewModel.deletePersona(indexSet: indexSet)
-    }
-}
-
-struct PersonalityView_Previews: PreviewProvider {
-    static var previews: some View {
-        PersonalityView(personality: .ESFJ)
     }
 }

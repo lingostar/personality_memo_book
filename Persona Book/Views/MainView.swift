@@ -13,6 +13,7 @@ struct MainView: View {
     enum Tab {
         case home
         case test
+        case myInfo
     }
     
     var body: some View {
@@ -22,11 +23,17 @@ struct MainView: View {
                     Label("Home".localized(), systemImage: "house.fill")
                 }
                 .tag(Tab.home)
-            
-            AIFaceTestView()
+
+//            AIFaceTestView()
+//                .tabItem {
+//                    Label("Test".localized(), systemImage: "face.smiling.fill")
+//                }
+//                .tag(Tab.test)
+            MyInfoView()
                 .tabItem {
-                    Label("Test".localized(), systemImage: "face.smiling.fill")
+                    Label("MyInfo".localized(), systemImage: "person.fill")
                 }
+                .tag(Tab.myInfo)
         }
     }
 }
