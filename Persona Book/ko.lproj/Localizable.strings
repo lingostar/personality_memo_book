@@ -14,10 +14,12 @@
 "Personality" = "성격 유형";
 "Cancel" = "취소";
 "Done" = "완료";
+"RelationshipWithUser" = "본인의 성격 유형과의 관계";
 "RelationshipWithOP" = "다른 성격 유형과의 관계";
 "SoulMate" = "천생연분";
 "GoodRelationship" = "좋은 관계";
 "BadRelationship" = "안맞아요";
+"Normal" = "평범해요";
 "PersonaList" = "페르소나 목록";
 "AddPersona" = "페르소나 추가";
 "EditMyInfo" = "내 정보 수정";

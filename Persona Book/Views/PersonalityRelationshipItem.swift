@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-struct PersonalityListItem: View {
+struct PersonalityRelationshipItem: View {
     var realtionText: String
     var personalityList: [Personality]
     
     var body: some View {
-        NavigationLink(destination: List(self.personalityList, id: \.self) { personality in
-            Text(personality.title())
+        NavigationLink(destination:
+            List(self.personalityList, id: \.self) { personality in
+                Text(personality.title)
             }
             .navigationTitle(realtionText)
             .navigationBarTitleDisplayMode(.inline)
@@ -25,6 +26,5 @@ struct PersonalityListItem: View {
                     .foregroundColor(.secondary)
             }
         }
-        
     }
 }

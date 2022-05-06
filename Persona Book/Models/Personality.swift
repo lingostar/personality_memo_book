@@ -7,8 +7,6 @@
 
 import Foundation
 
-let personalityTypes = ["ISTP-A/T", "ISFP-A/T", "INTP-A/T", "INFP-A/T", "ISTJ-A/T", "INTJ-A/T", "ISFJ-A/T", "INFJ-A/T", "ESTP-A/T", "ESFP-A/T", "ENTP-A/T", "ENFP-A/T", "ESTJ-A/T", "ENTJ-A/T", "ESFJ-A/T", "ENFJ-A/T"]
-
 enum Personality: Int, CaseIterable, Codable {
     case ISTP
     case ISFP
@@ -27,7 +25,7 @@ enum Personality: Int, CaseIterable, Codable {
     case ESFJ
     case ENFJ
     
-    func title() -> String {
+    var title: String {
         switch self {
         case .ISTP:
             return "ISTP-A/T"
@@ -64,7 +62,7 @@ enum Personality: Int, CaseIterable, Codable {
         }
     }
     
-    func getSoulMateRelation() -> [Personality] {
+    var soulMate: [Personality] {
         switch self {
         case .ISTP:
             return [.ESFJ, .ESTJ]
@@ -100,7 +98,7 @@ enum Personality: Int, CaseIterable, Codable {
             return [.INFP, .ISFP]
         }
     }
-    func getGoodRelation() -> [Personality] {
+    var goodRelation: [Personality] {
         switch self {
         case .ISTP:
             return []
@@ -136,7 +134,7 @@ enum Personality: Int, CaseIterable, Codable {
             return [.ENFP, .INFJ, .ENFJ, .INTJ, .ENTJ, .INTP, .ENTP]
         }
     }
-    func getBadRelation() -> [Personality] {
+    var badRelation: [Personality] {
         switch self {
         case .ISTP:
             return [.INFP, .ENFP, .INFJ, .ENFJ]
@@ -170,45 +168,6 @@ enum Personality: Int, CaseIterable, Codable {
             return [.INFP, .ENFP, .INFJ, .ENFJ]
         default:
             return [.ESFP, .ISTP, .ESTP, .ISFJ, .ESFJ, .ISTJ, .ESTJ]
-        }
-    }
-}
-
-extension Int {
-    var personality: Personality {
-        switch self {
-        case 0:
-            return Personality.ISTP
-        case 1:
-            return Personality.ISFP
-        case 2:
-            return Personality.INTP
-        case 3:
-            return Personality.INFP
-        case 4:
-            return Personality.ISTJ
-        case 5:
-            return Personality.INTJ
-        case 6:
-            return Personality.ISFJ
-        case 7:
-            return Personality.INFJ
-        case 8:
-            return Personality.ESTP
-        case 9:
-            return Personality.ESFP
-        case 10:
-            return Personality.ENTP
-        case 11:
-            return Personality.ENFP
-        case 12:
-            return Personality.ESTJ
-        case 13:
-            return Personality.ENTJ
-        case 14:
-            return Personality.ESFJ
-        default:
-            return Personality.ENFJ
         }
     }
 }

@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct Persona_BookApp: App {
+    @StateObject var viewModel = MainVM()
 
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(self.viewModel)
         }
     }
 }

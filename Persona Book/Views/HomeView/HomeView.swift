@@ -8,59 +8,54 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var viewModel: MainVM
+    @State var search = ""
+    @State var isAppStart = false
+    @State var showPersonaViewModal = false
     let columns = [
-            GridItem(.flexible(), spacing: 20),
-            GridItem(.flexible(), spacing: 20),
+            GridItem(.flexible(), spacing: 25),
+            GridItem(.flexible(), spacing: 25),
     ]
-    @StateObject var viewModel = HomeViewModel()
     
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: columns,  spacing: 20) {
-                    ForEach(0..<16, id: \.self) { index in
-                        NavigationLink(destination: PersonalityView(personality: index.personality), isActive: self.$viewModel.isOn[index]) {
-                            PersonalityItem(personality: index.personality, number: self.$viewModel.personaNumbers[index])
-                                .onTapGesture {
-                                    self.viewModel.isOn[index] = true
-                                }
+                LazyVGrid(columns: self.columns,  spacing: 25) {
+                    ForEach(0..<16, id: \.self) { personalityNumber in
+                        NavigationLink(destination: PersonalityView(personality: personalityNumber.personality)) {
+                            PersonalityItem(personality: personalityNumber.personality)
                         }
                         .foregroundColor(.primary)
                     }
                 }
-                .padding(.bottom, 10)
-                .padding(.horizontal, 15)
+                .padding(.vertical, 15)
+                .padding(.horizontal, 25)
             }
-            .background(Color(UIColor.systemGroupedBackground))
             .navigationTitle("Home".localized())
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.inline)            .background(Color(UIColor.systemGroupedBackground))
         }
-        .onAppear {
-            self.viewModel.loadPersonas()
-        }
-        .onChange(of: self.viewModel.isOn) { _ in
-            self.viewModel.loadPersonas()
-        }
-        .searchable(text: self.$viewModel.searchText, placement: .toolbar, prompt: "InputPersonaName".localized()) {
-            ForEach(self.viewModel.allPersona) { persona in
-                HStack {
-                    Text(persona.name)
-                    Spacer()
-                    Text(persona.personality.title())
-                        .foregroundColor(.secondary)
+        .searchable(text: self.$search, prompt: "InputPersonaName".localized()) {
+            ForEach(self.viewModel.personas, id: \.self) { personaList in
+                ForEach(personaList) { persona in
+                    HStack {
+                        Text(persona.name)
+                            .foregroundColor(.primary)
+                        Spacer()
+                        Text(persona.personality.title)
+                            .foregroundColor(.secondary)
+                    }
                 }
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    self.viewModel.isOn[persona.personality.rawValue] = true
+            }
+        }
+        .task {
+            if !self.isAppStart {
+                self.viewModel.personas = await Persona.all
+                
+                self.viewModel.personas.forEach { personaList in
+                    self.viewModel.numberOfPersonas += personaList.count
                 }
+                self.isAppStart = true
             }
         }
     }
 }
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
-

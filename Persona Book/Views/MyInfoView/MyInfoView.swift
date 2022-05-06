@@ -8,45 +8,44 @@
 import SwiftUI
 
 struct MyInfoView: View {
-    @StateObject var viewModel = MyInfoViewModel()
+    @EnvironmentObject var viewModel: MainVM
+    @State var showPersonaViewModal = false
     
     var body: some View {
         NavigationView {
             Form {
+                // Show My Personality
                 Section {
                     List {
                         HStack {
-                            Text("Name".localized())
-                            Spacer()
-                            Text(self.viewModel.userName)
-                                .foregroundColor(.secondary)
-                        }
-                        HStack {
                             Text("Personality".localized())
                             Spacer()
-                            Text(self.viewModel.userPersonality.personality.title())
+                            Text(self.viewModel.userPersonality.personality.title)
                                 .foregroundColor(.secondary)
                         }
                     }
                 }
                 
+                // Show Number Of Added Personas
                 Section {
                     HStack {
                         Text("Persona".localized())
                         Spacer()
-                        Text("\(self.viewModel.totalPersonaNumber)")
+                        Text("\(self.viewModel.numberOfPersonas)")
                             .foregroundColor(.secondary)
                     }
                 }
                 
+                // Show Relationship With Other Personalities
                 Section(content: {
-                    PersonalityListItem(realtionText: "SoulMate".localized(), personalityList: self.viewModel.userPersonality.personality.getSoulMateRelation())
-                    PersonalityListItem(realtionText: "GoodRelationship".localized(), personalityList: self.viewModel.userPersonality.personality.getGoodRelation())
-                    PersonalityListItem(realtionText: "BadRelationship".localized(), personalityList: self.viewModel.userPersonality.personality.getBadRelation())
+                    PersonalityRelationshipItem(realtionText: "SoulMate".localized(), personalityList: self.viewModel.userPersonality.personality.soulMate)
+                    PersonalityRelationshipItem(realtionText: "GoodRelationship".localized(), personalityList: self.viewModel.userPersonality.personality.goodRelation)
+                    PersonalityRelationshipItem(realtionText: "BadRelationship".localized(), personalityList: self.viewModel.userPersonality.personality.badRelation)
                 }, header: {
                     Text("RelationshipWithOP".localized())
                 })
                 
+                // Link To Test
                 Section {
                     Link("GoToTestPersonality".localized(), destination: URL(string: "https://www.16personalities.com")!)
                 }
@@ -56,24 +55,15 @@ struct MyInfoView: View {
             .toolbar {
                 ToolbarItem {
                     Button(action: {
-                        self.viewModel.showPersonaViewModal = true
+                        self.showPersonaViewModal = true
                     }) {
                         Image(systemName: "square.and.pencil")
                     }
-                    .sheet(isPresented: self.$viewModel.showPersonaViewModal) {
-                        PersonaView(persona: Persona(name: self.viewModel.userName, personality: self.viewModel.userPersonality.personality), mode: .MY)
+                    .sheet(isPresented: self.$showPersonaViewModal) {
+                        PersonaView(persona: Persona(name: "", personality: self.viewModel.userPersonality.personality), mode: .MY)
                     }
                 }
             }
-            .onAppear {
-                self.viewModel.loadPersonas()
-            }
         }
-    }
-}
-
-struct MyInfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        MyInfoView()
     }
 }

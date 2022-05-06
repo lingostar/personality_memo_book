@@ -12,7 +12,6 @@ struct MainView: View {
     
     enum Tab {
         case home
-        case test
         case myInfo
     }
     
@@ -23,23 +22,12 @@ struct MainView: View {
                     Label("Home".localized(), systemImage: "house.fill")
                 }
                 .tag(Tab.home)
-
-//            AIFaceTestView()
-//                .tabItem {
-//                    Label("Test".localized(), systemImage: "face.smiling.fill")
-//                }
-//                .tag(Tab.test)
+            
             MyInfoView()
                 .tabItem {
                     Label("MyInfo".localized(), systemImage: "person.fill")
                 }
                 .tag(Tab.myInfo)
         }
-    }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
     }
 }

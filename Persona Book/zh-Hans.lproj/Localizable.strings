@@ -14,10 +14,12 @@
 "Personality" = "性格类型";
 "Cancel" = "取消";
 "Done" = "完成";
+"RelationshipWithUser" = "和本人性格类型之间的关系";
 "RelationshipWithOP" = "和其他性格类型之间的关系";
 "SoulMate" = "心灵伴侣";
 "GoodRelationship" = "好关系";
 "BadRelationship" = "坏关系";
+"Normal" = "一般般";
 "PersonaList" = "朋友名单";
 "AddPersona" = "添加朋友";
 "EditMyInfo" = "修改个人信息";

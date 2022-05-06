@@ -8,54 +8,52 @@
 import SwiftUI
 
 struct PersonalityView: View {
-    @StateObject var viewModel = PersonalityViewModel()
     var personality: Personality
-    @State var tempPersona = Persona(name: "", personality: .ISTJ)
+    @State var showPersonaViewModal = false
+    @EnvironmentObject var viewModel: MainVM
     
     var body: some View {
         Form {
             Section(content: {
-                PersonalityListItem(realtionText: "SoulMate".localized(), personalityList: self.personality.getSoulMateRelation())
-                PersonalityListItem(realtionText: "GoodRelationship".localized(), personalityList: self.personality.getGoodRelation())
-                PersonalityListItem(realtionText: "BadRelationship".localized(), personalityList: self.personality.getBadRelation())
+                Text(self.viewModel.relationshipWithUser(personality: self.personality))
+            }, header: {
+                Text("RelationshipWithUser".localized())
+            })
+            
+            // Show Relationship With Other Personalities
+            Section(content: {
+                PersonalityRelationshipItem(realtionText: "SoulMate".localized(), personalityList: self.personality.soulMate)
+                PersonalityRelationshipItem(realtionText: "GoodRelationship".localized(), personalityList: self.personality.goodRelation)
+                PersonalityRelationshipItem(realtionText: "BadRelationship".localized(), personalityList: self.personality.badRelation)
             }, header: {
                 Text("RelationshipWithOP".localized())
             })
             
+            // Show Added Persona List
             Section(content: {
-                ForEach(self.viewModel.personas) { persona in
+                ForEach(self.viewModel.personas[self.personality.rawValue]) { persona in
                     Text(persona.name)
                 }
-                .onDelete(perform: self.deletePersona)
+                .onDelete { indexSet in
+                    self.viewModel.deletePersona(at: indexSet, personality: self.personality)
+                }
             }, header: {
                 Text("PersonaList".localized())
             })
         }
-        .navigationBarTitle(personality.title())
+        .navigationBarTitle(personality.title)
         .navigationBarTitleDisplayMode(.large)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    self.viewModel.showPersonaViewModal = true
+                    self.showPersonaViewModal = true
                 }) {
                     Image(systemName: "plus")
                 }
-                .sheet(isPresented: self.$viewModel.showPersonaViewModal) {
+                .sheet(isPresented: self.$showPersonaViewModal) {
                     PersonaView(persona: Persona(name: "", personality: self.personality), mode: .NEW)
                 }
             }
         }
-        .onAppear {
-            self.viewModel.personality = self.personality
-            self.viewModel.loadPersonas(key: self.personality.title())
-        }
-        .onChange(of: self.viewModel.showPersonaViewModal) { value in
-            if !value {
-                self.viewModel.loadPersonas(key: self.personality.title())
-            }
-        }
-    }
-    private func deletePersona(at indexSet: IndexSet) {
-        self.viewModel.deletePersona(indexSet: indexSet)
     }
 }

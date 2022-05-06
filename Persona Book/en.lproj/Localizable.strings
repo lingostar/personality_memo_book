@@ -14,10 +14,12 @@
 "Personality" = "Personality";
 "Cancel" = "Cancel";
 "Done" = "Done";
+"RelationshipWithUser" = "Relationship With User Personality";
 "RelationshipWithOP" = "Relationship With Other Personalities";
 "SoulMate" = "Soul Mate";
 "GoodRelationship" = "Good Relation";
 "BadRelationship" = "Bad Relation";
+"Normal" = "Normal Relation";
 "PersonaList" = "Persona List";
 "AddPersona" = "Add Persona";
 "EditMyInfo" = "Edit My Info";

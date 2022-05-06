@@ -9,25 +9,26 @@ import SwiftUI
 
 struct PersonalityItem: View {
     var personality: Personality
-    @Binding var number: Int
+    @State var number: Int = -1
+    @EnvironmentObject var viewModel: MainVM
     
     var body: some View {
         VStack(spacing: 0) {
-            Text(personality.title())
-            Text("\(number)")
-                .padding(.top, 10)
+            Text(self.personality.title)
+                .bold()
+                .padding(.horizontal, 30)
+            
+            Text("\(self.number)")
                 .font(.subheadline)
+                .padding(.top, 10)
         }
-        .padding(.horizontal, 30)
         .padding(.vertical, 20)
         .background(Color(UIColor.secondarySystemGroupedBackground))
         .cornerRadius(10)
-    }
-}
-
-struct PersonalityItem_Previews: PreviewProvider {
-    static var previews: some View {
-//        PersonalityItem(personality: .ESFJ)
-        Text("")
+        .task {
+            Task {
+                self.number = self.viewModel.personas[self.personality.rawValue].count
+            }
+        }
     }
 }
