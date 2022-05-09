@@ -8,7 +8,13 @@
 import Foundation
 
 final class MainVM: ObservableObject {
-    @Published var personas: [[Persona]] = []
+    @Published var personas: [[Persona]] = [[Persona]](repeating: [], count: 16) {
+        didSet {
+            self.filteredPersonas = self.personas
+        }
+    }
+    
+    @Published var filteredPersonas: [[Persona]] = [[Persona]](repeating: [], count: 16)
     
     @Published var userPersonality: Int = UserDefaults.standard.integer(forKey: "personality") {
         willSet {
@@ -26,6 +32,10 @@ final class MainVM: ObservableObject {
     func deletePersona(at indexSet: IndexSet, personality: Personality) {
         self.personas[personality.rawValue].remove(atOffsets: indexSet)
         self.numberOfPersonas -= 1
+        
+        let personaList: [Persona] = self.personas[personality.rawValue]
+        let data = personaList.map { try? JSONEncoder().encode($0) }
+        UserDefaults.standard.set(data, forKey: personality.title)
     }
     
     func relationshipWithUser(personality: Personality) -> String {

@@ -65,5 +65,6 @@ struct MyInfoView: View {
                 }
             }
         }
+        .navigationViewStyle(.stack)
     }
 }

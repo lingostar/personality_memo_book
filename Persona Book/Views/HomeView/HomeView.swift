@@ -17,6 +17,19 @@ struct HomeView: View {
             GridItem(.flexible(), spacing: 25),
     ]
     
+    @ViewBuilder
+    func generatePersonaListView(personaList: [Persona]) -> some View {
+        ForEach(personaList) { persona in
+            HStack {
+                Text(persona.name)
+                    .foregroundColor(.primary)
+                Spacer()
+                Text(persona.personality.title)
+                    .foregroundColor(.secondary)
+            }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -28,23 +41,17 @@ struct HomeView: View {
                         .foregroundColor(.primary)
                     }
                 }
-                .padding(.vertical, 15)
                 .padding(.horizontal, 25)
             }
+            .padding(.vertical, 0.5)
             .navigationTitle("Home".localized())
-            .navigationBarTitleDisplayMode(.inline)            .background(Color(UIColor.systemGroupedBackground))
+            .navigationBarTitleDisplayMode(.inline)
+            .background(Color(UIColor.systemGroupedBackground))
         }
+        .navigationViewStyle(.stack)
         .searchable(text: self.$search, prompt: "InputPersonaName".localized()) {
-            ForEach(self.viewModel.personas, id: \.self) { personaList in
-                ForEach(personaList) { persona in
-                    HStack {
-                        Text(persona.name)
-                            .foregroundColor(.primary)
-                        Spacer()
-                        Text(persona.personality.title)
-                            .foregroundColor(.secondary)
-                    }
-                }
+            ForEach(self.viewModel.filteredPersonas, id: \.self) { personaList in
+                generatePersonaListView(personaList: personaList)
             }
         }
         .task {
@@ -55,6 +62,15 @@ struct HomeView: View {
                     self.viewModel.numberOfPersonas += personaList.count
                 }
                 self.isAppStart = true
+            }
+        }
+        .onChange(of: self.search) { _ in
+            if self.search.isEmpty {
+                self.viewModel.filteredPersonas = self.viewModel.personas
+            } else {
+                self.viewModel.filteredPersonas = self.viewModel.personas.map { personaList in
+                    personaList.filter { $0.name.contains(self.search) }
+                }
             }
         }
     }

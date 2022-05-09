@@ -12,6 +12,7 @@
 		B7713D2D2823F62600D56228 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7713D2C2823F62600D56228 /* MainVM.swift */; };
 		B77887D1280AD0B600D6E1F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B77887D3280AD0B600D6E1F6 /* Localizable.strings */; };
 		B77887D8280AD16500D6E1F6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77887D7280AD16500D6E1F6 /* Extensions.swift */; };
+		B7C057AE2827AE5400BF3E6F /* AIFaceTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C057AD2827AE5400BF3E6F /* AIFaceTestView.swift */; };
 		B7C3688027FB13D40002BA0F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3687F27FB13D40002BA0F /* MainView.swift */; };
 		B7C369082804115F0002BA0F /* PersonalityItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C369072804115F0002BA0F /* PersonalityItem.swift */; };
 		B7C3690B280414B10002BA0F /* PersonaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C3690A280414B10002BA0F /* PersonaView.swift */; };
@@ -32,6 +33,7 @@
 		B77887D4280AD12D00D6E1F6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B77887D5280AD13400D6E1F6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B77887D7280AD16500D6E1F6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B7C057AD2827AE5400BF3E6F /* AIFaceTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFaceTestView.swift; sourceTree = "<group>"; };
 		B7C3687F27FB13D40002BA0F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B7C369072804115F0002BA0F /* PersonalityItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityItem.swift; sourceTree = "<group>"; };
 		B7C3690A280414B10002BA0F /* PersonaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 				B77887D7280AD16500D6E1F6 /* Extensions.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		B7C057AC2827AE3D00BF3E6F /* AIFaceTest */ = {
+			isa = PBXGroup;
+			children = (
+				B7C057AD2827AE5400BF3E6F /* AIFaceTestView.swift */,
+			);
+			path = AIFaceTest;
 			sourceTree = "<group>";
 		};
 		B7C3690E280486E00002BA0F /* ViewModels */ = {
@@ -122,6 +132,7 @@
 		B7CB7AA227F05216009535A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B7C057AC2827AE3D00BF3E6F /* AIFaceTest */,
 				B7C3690A280414B10002BA0F /* PersonaView.swift */,
 				B70BF382280BDD9F000194A2 /* PersonalityRelationshipItem.swift */,
 				B70BF384280BFF98000194A2 /* MyInfoView */,
@@ -239,6 +250,7 @@
 				B7C369082804115F0002BA0F /* PersonalityItem.swift in Sources */,
 				B7CB7A9027F02AF9009535A1 /* Persona_BookApp.swift in Sources */,
 				B7CB7AB027F09D28009535A1 /* PersonalityView.swift in Sources */,
+				B7C057AE2827AE5400BF3E6F /* AIFaceTestView.swift in Sources */,
 				B7CB7AA427F05243009535A1 /* HomeView.swift in Sources */,
 				B7C3690D2804500A0002BA0F /* Personality.swift in Sources */,
 				B77887D8280AD16500D6E1F6 /* Extensions.swift in Sources */,
