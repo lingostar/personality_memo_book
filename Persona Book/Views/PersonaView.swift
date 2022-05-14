@@ -12,6 +12,7 @@ struct PersonaView: View {
     var mode: PersonaViewMode
     @Environment(\.presentationMode) var presentation
     @EnvironmentObject var viewModel: MainVM
+    @FocusState var isKeyboardOn: Bool
     
     var body: some View {
         NavigationView {
@@ -26,6 +27,7 @@ struct PersonaView: View {
                             HStack {
                                 TextField("InputName".localized(), text: self.$persona.name)
                                     .disableAutocorrection(true)
+                                    .focused(self.$isKeyboardOn)
                                 
                                 if !self.persona.name.isEmpty {
                                     Image(systemName: "xmark.circle.fill")
@@ -76,6 +78,16 @@ struct PersonaView: View {
                         Text("Done".localized())
                     }
                     .disabled(self.mode == .NEW && self.persona.name.isEmpty)
+                }
+                
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    
+                    Button(action: {
+                        self.isKeyboardOn = false
+                    }) {
+                        Text("Done".localized())
+                    }
                 }
             }
         }
